@@ -1,0 +1,479 @@
+.large-header{
+    /* display: flex;  */
+    width: 100%;
+    height:auto;
+    align-items: center;
+    /* 定义子元素之间的距离 */
+    /* gap: 2px; */
+    position:relative;
+}
+
+
+.nav{
+    /* flex是弹性容器 */
+    display: flex; 
+    /* align对齐，items项目 */
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    height: auto;
+    /* padding是设置border与内容之间的距离 */
+    padding: 0 0 0 14px;
+    /* 改变元素自身尺寸的计算方式（包含 border/padding） */
+    box-sizing: border-box;
+    position: absolute;
+    top:0;
+    /* 图层置顶，1000数值越大越往顶靠 */
+    z-index: 1000;
+}
+
+.left-enter{
+    display: flex;
+}
+
+.left-enter .entry-title{
+    display: flex;
+    height: 64px;
+    align-items: center;
+    color: bisque;
+    margin-right: 6px;
+}
+
+body{
+    background-color: #0efdfdf8;
+    /* 常用做法是将字体设置为 14px*/
+    font-size: 14px;
+}
+
+.icon-img{
+    vertical-align: middle;
+    height: 14px;
+    color: #f7f0f0;
+}
+
+.center-search-container{
+    /* flex:1是对剩余控制自动分配大小 */
+    flex: 1;
+    display: flex;
+    height: 30px;
+    padding: 0px 8px;
+    margin-right: 5px;
+    /* 圆角 */
+    border-radius: 8px;
+    border: 1px solid #f7f0f0c0;
+    background-color: #f7f0f0;
+    /* position: relative;  */
+    align-items: center;
+}
+.center-search-container  .nav-search-button{
+    /* position: absolute; */
+    display: flex;
+    cursor: pointer;
+    /* top: 1px; */
+    /* right: 8px; */
+    align-items: center;
+    border-radius: 3px;
+    cursor: pointer;
+    /* background-color: rgba(129, 121, 121, 0.658); */
+    /* transition 动画设置 样式+持续时间+变化速度+延迟开始 */
+    transition:background-color 3s;
+
+}
+
+.nav-search-button:hover{
+    background-color: rgb(13, 255, 0);
+}
+
+.center-search-container  .nav-search-content{
+    /* position: absolute; */
+    display: flex;
+    cursor: pointer;
+    top: 1px;
+    left: 2px;
+    align-items: center;
+    width: 100%;
+    /* flex: 1; */
+}
+
+.nav-search-content .nav-search-input{
+    flex: 1;
+    /* transparent 透明 */
+    /* background-color: transparent;  */
+    /* 溢出部分会隐藏 */
+    overflow: hidden; 
+    line-height: 1px;
+}   
+
+
+.center-search-container:hover{
+    background-color: rgb(249, 244, 244);
+
+}
+
+/* 头部--导航--右侧 */
+.right-center{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    /* background-color: #f7f0f0; */
+}
+
+.right-center .right-center-touxiang{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid #5e0efdf8;
+    /* padding-right: 30px; */
+    display: flex;
+    background-color: #c5fd0ef8;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-center-touxiang a{
+    display: flex;
+    background-color: brown;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-center-touxiang span{
+    font-size: 10px;
+    font-weight:700 ;
+}
+
+
+
+.right-center-item{
+    padding: 0 40px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.right-center-item a{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right-center-item a span{
+    font-size: 10px;
+}
+
+.right-center-fabu{
+
+    /* background-color: #fd0ed1f8; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid #010f0ff8; */
+    /* width: 90px; */
+    padding: 4px;
+    text-align: center;
+}
+
+.right-center-fabu a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* line-height: 3px; */
+    background-color: #e712d9f8; 
+    border-radius: 5px;
+    padding: 5px;
+    
+}
+
+.right-center-fabu svg{
+    width: 20px;
+    height: 20px;
+    
+    
+   
+}
+
+.right-center-fabu span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* background-color: #e712d9f8; */
+    padding: 0px 5px;
+    font-size: 10px;
+}
+
+
+/* 头部--banner */
+
+.toubu-banner{
+box-sizing: border-box;
+width: 100%;
+height: 150px;
+overflow: hidden;
+/* padding: 0 0px 0 0;  */
+position: relative;
+z-index: 100;
+}
+
+.toubu-banner img{
+    /* 让图片宽度撑慢容器 */
+    width: 100%;
+    /* 平铺 */
+    object-fit: cover;
+    /* 透明度 */
+    opacity: 0.95;
+   
+}
+
+.toubu-banner-logo{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 20px;  
+    left: 50px; 
+}
+
+/* 频道 */
+
+.channel-container{
+    width: 100%;
+    height: auto;
+    background-color: #e1e4e4f8;
+    align-items: center;
+    display: flex;
+    padding: 0 20px;
+    position: relative;
+
+}
+
+.channel-left{
+    display: flex;
+    width: 200px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.channel-left a{
+
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.channel-icon-1, .channel-icon-2 {
+    width: 40px;
+    height: 40px;
+    background-color: #fd8d0ef8;
+    /* border: 1px solid #150502d2; */
+    border-radius: 50%;
+}
+
+.channel-icon-3{
+    width: 40px;
+    height: 40px;
+    background-color: #0e26fdf8;
+    /* border: 1px solid #150502d2; */
+    border-radius: 50%;
+}
+
+.channel-right{
+    display: flex;
+    width: 100%;
+    /* align-items: center;为什么不能设置这个，不懂 */
+}
+
+.channel-right-leftN{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    gap: 3px;
+    /* width: 100%; */
+    flex: 1;
+}
+
+.channel-right-leftN a{
+
+    background-color: #c0c1caf8;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    
+    border-radius: 3px;
+}
+
+.channel-right-rightN{
+    display: grid;
+    /* width: 500px; */
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr); 
+    flex-shrink: 0;
+    margin-left: 10px;
+    gap: 3px;
+}
+
+.channel-right-rightN a{
+    background-color: #c0c1caf8 ;
+    height: 30px;
+    width: auto;
+    padding: 0 5px;
+    line-height: 30px;
+    text-align: left; 
+    border: 1px solid #0e0e0ff8;
+    border-radius: 4px;
+    justify-content: center;
+    /* display: flex;  */
+}
+
+
+.channel-right-rightN svg{ 
+    width: 20px; 
+    height: 20px; 
+    vertical-align: middle;
+ } 
+
+
+
+/* 推荐列表 */
+.recommended-container{
+    width: 100%;
+    display: grid; 
+    /* grid-template-columns: 1fr repeat(auto-fill, minmax(200px, 1fr)); */
+    /* grid-auto-rows: auto; */
+      
+    /* grid-template-columns: 1fr 2fr; */
+    /* grid-template-columns: repeat(7,1fr); */
+    /* grid-template-rows: repeat(2,1fr); */
+    /* grid-template-areas: "left right"; */
+    grid-template-columns: repeat(7,1fr);
+    gap: 10px;
+    /* padding: 5px; */
+    box-sizing: border-box;
+}
+
+.recommended-container-left{
+     width: 400px;
+    min-height: 400px;
+    background-color: #11db1f;
+    border: 1px solid #000000;
+   
+    grid-column: 1/3;
+    grid-row: 1/3;
+    box-sizing: border-box;
+}
+
+.recommended-container-right{ 
+    /* grid-area: right; */
+    /* display: grid;  */
+    /* grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); */
+    /* grid-template-rows: repeat(4,1fr); */
+    /* grid-template-columns: repeat(3,1fr); */
+    /* gap: 5px;  */
+    grid-column: 2/-1;
+    display: contents;
+} 
+
+/* .recommended-container-right-items{ */
+    /* display: grid; */
+    /* width: 100%; */
+    /* grid-template-columns: repeat(4,1fr);  */
+    /* gap:10px; */
+    /* grid-template-columns: repeat(auto-fill,200px); */
+/* } */
+
+
+
+ /* 微博标签内容 */
+
+
+ .c-r-item{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #0e0e0ff8;
+    position: relative;
+    background-color: #ffffff;
+ }
+
+
+ .c-r-item-bottom{
+    display: flex;
+    /* padding: 0 px; */
+    border-top: 1px solid #0e0e0ff8;
+    margin: 0 5px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    width: 180px;
+    box-sizing: border-box;
+    cursor: pointer;
+ }
+
+ .c-r-item-bottom svg{
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+
+ }
+
+ .c-r-item-middle-text{
+    width: 100%;
+    max-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4;
+    /* transition: ; */
+ }
+
+ .c-r-item-middle-text.expanded{
+    max-height: 200px;
+ }
+ .c-r-item-middle button{
+    color: #000000;
+ }
+
+
+ .c-r-item-top{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    margin: 5px 0;
+    /* border-bottom: 1px solid #000000; */
+ }
+
+ .c-r-item-top-touxiang{
+    border-radius: 50%;
+    margin-right: 5px;
+ }
+
+.c-r-item-top-touxiang svg{
+    width: 20px;
+    height: 20px;
+}
+
+.c-r-item-top button{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 5px;
+    /* color: #220fea; */
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.c-r-item-top svg{
+    width: 20px;
+    height: 20px;
+}
