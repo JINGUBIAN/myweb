@@ -1,1 +1,24 @@
 
+* {
+  padding: 0;  
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ol,ul,li{
+ list-style: none;
+}
+
+a{
+    /* 鏂囨湰瑁呬慨 锛堜笅鍒掔嚎娌℃湁锛?/
+    text-decoration: none; 
+    color: #000;
+    /* 榧犳爣鍙樺皬鎵?*/
+    cursor: pointer;
+}
+
+input{
+    /* outline澶栬疆寤撶嚎: [outline-width] [outline-style] [outline-color] */
+    outline:  none;
+    border: 0 none;
+}
